@@ -1,0 +1,9 @@
+click==8.0.3
+Flask==2.0.2
+Flask-JWT-Extended==4.3.1
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+PyJWT==2.3.0
+python-dotenv==0.19.2
+Werkzeug==2.0.2
