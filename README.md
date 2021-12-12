@@ -2,14 +2,21 @@
 
 This is an application which contains a connected flask backend to a react frontend
 
-Run: `npm install` before running the scripts below.
+## Backend
+Enter the backend directory and create your environment:
 
-Next, enter the backend directory and install your environment, then install the requirements using:
+For mac/unix users: python3 -m venv env   (create)
+                    source env/bin/activate (activate)
+
+For windows users: py -m venv env (create)
+				   .\env\Scripts\activate (activate)
+
+then install the requirements using:
 `pip install -r requirements.txt`
+
 ## Available Scripts
 
-In the project directory, you can run:
-
+Return to the base directory and run: `npm install` before running the scripts below.
 ### `npm run start-backend`
 This starts the flask backend server
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
