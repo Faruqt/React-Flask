@@ -11,7 +11,7 @@ For mac/unix users: python3 -m venv env   (create)
 For windows users: py -m venv env (create)
 				   .\env\Scripts\activate (activate)
 
-then install the requirements using:
+Then install the requirements using:
 `pip install -r requirements.txt`
 
 ## Available Scripts
