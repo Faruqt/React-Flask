@@ -25,7 +25,8 @@ Step2: Then install the requirements using:
 
 Return to the base directory and run: `npm install` before running the scripts below.
 ### `npm run start-backend`
-This starts the flask backend server
+
+This starts the flask backend server.\
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ### `npm start`
