@@ -3,15 +3,22 @@
 This is an application which contains a connected flask backend to a react frontend
 
 ## Backend
-Enter the backend directory and create your environment:
+Step1: Enter the backend directory and create your environment:
 
-For mac/unix users: python3 -m venv env   (create)
-                    source env/bin/activate (activate)
+For mac/unix users: 
 
-For windows users: py -m venv env (create)
-				   .\env\Scripts\activate (activate)
+**create:** ```python3 -m venv env```
 
-Then install the requirements using:
+**activate:** `source env/bin/activate`
+
+For windows users: 
+
+**create:** `py -m venv env`
+
+**activate:** `.\env\Scripts\activate`
+
+
+Step2: Then install the requirements using:
 `pip install -r requirements.txt`
 
 ## Available Scripts
