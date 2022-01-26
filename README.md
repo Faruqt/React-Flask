@@ -3,7 +3,7 @@
 This is an application which contains a connected flask backend to a react frontend
 
 ## Backend
-Step1: Enter the backend directory and create your environment:
+Step1: Enter the backend directory and create and activate your environment:
 
 For mac/unix users: 
 
