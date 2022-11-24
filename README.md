@@ -48,10 +48,10 @@ Writing Dockerfile for both frontend and backend
 `docker run -itd --name <container_name> -p <portno> <imagename>`
 
 >step4: Checking the containers created using :
->To see running containers
-`docker ps` 
->To see running and non-running containers
-`docker ps -a` 
+>To see running containers : 
+>` docker ps ` 
+>To see running and non-running containers :
+>` docker ps -a ` 
 
 >step5: In browser exposing the container by :
 >`localhost:portno`
