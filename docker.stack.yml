@@ -1,0 +1,26 @@
+version : "3.8"
+services:
+  web:
+    image: nireshprabu/frontapp
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: [node.hostname == centos7]
+    ports:
+      - "3000:3000"
+  api:
+    image: nireshprabu/backapp
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: [node.hostname == centos7]
+    ports:
+      - "5000:5000"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
