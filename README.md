@@ -38,7 +38,7 @@ Click on the button that appears on the page to make the request to the API endp
 
 ## Docker
 Writing Dockerfile for both frontend and backend 
-step1: create Dockerfile and write commands
+>step1: create Dockerfile and write commands
 `vi Dockerfile`
 
 step2: Creating Docker image in frontend and backend using :
