@@ -61,7 +61,7 @@ Creating Dockerstackfile
 >step1: Initializing dockerswarm in manager node by :
 >`docker swarm init --advertise-addr <IPaddr of manager node>`
 
->step2: Assigning workernode to managernode using managernode token  
+>step2: Assigning workernode for managernode using token :  
 >`docker swarm join --token (token will be provided after executing step1)`
 
 >step3: Creating the dockerstackfile by :
