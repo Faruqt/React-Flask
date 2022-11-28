@@ -1,25 +1,25 @@
 version : "3.8"
 services:
   web:
-    image: <imagename>
+    image: <frontend_imagename>
     deploy:
       mode: replicated
       replicas: 2
       restart_policy:
         condition: on-failure
-      placement:
-        constraints: [node.hostname == <hostname of your machine>]
+      # placement:
+      #   constraints: [node.hostname == <hostname of your machine>]
     ports:
       - "3000:3000"
   api:
-    image: <imagename>
+    image: <backend_imagename>
     deploy:
       mode: replicated
       replicas: 2
       restart_policy:
         condition: on-failure
-      placement:
-        constraints: [node.hostname == <hostname of your machine>]
+      # placement:
+      #   constraints: [node.hostname == <hostname of your machine>]
     ports:
       - "5000:5000"
     volumes:
