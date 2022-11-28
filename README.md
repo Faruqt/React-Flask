@@ -37,12 +37,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Click on the button that appears on the page to make the request to the API endpoint in the backend. 
 
 ## Docker
-Writing Dockerfile for both frontend and backend 
->step1: create Dockerfile and write commands
-`vi Dockerfile`
+#### Create Dockerfile and write commands using the reference given above
+>step1: Creating Docker image in frontend using :
+`docker build -t <imagename> . 
 
->step2: Creating Docker image in frontend and backend using :
-`docker build -t <imagename> . `
+>step2: Creating Docker image in backend using :
+>`cd backend/`
+>`docker build -t <imagename> . `
 
 >step3: Creating container using Docker image by this command :
 `docker run -itd --name <container_name> -p <portno> <imagename>`
@@ -56,8 +57,14 @@ Writing Dockerfile for both frontend and backend
 >step5: In browser exposing the container by :
 >`localhost:portno`
 
-## Dockerswarm
-Creating Dockerstackfile
+## Dockercompose
+#### Nameformat for docker compose file creation: `docker-compose.yml`
+**To run:** `docker compose up -d`
+**To stop:** `docker compose down -d`
+**For expose:** In browser `ipaddr:portno`
+
+## Dockerswarm 
+#### Nameformat for docker stack file creation: `docker.stack.yml`
 >step1: Initializing dockerswarm in manager node by :
 >`docker swarm init --advertise-addr <IPaddr of manager node>`
 
