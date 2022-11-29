@@ -39,7 +39,7 @@ Click on the button that appears on the page to make the request to the API endp
 ## Docker
 #### Create Dockerfile and write commands using the reference given above
 >step1: Creating Docker image in frontend using :
-`docker build -t <imagename> . 
+>`docker build -t <imagename> . 
 
 >step2: Creating Docker image in backend using :
 >`cd backend/`
