@@ -37,45 +37,83 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Click on the button that appears on the page to make the request to the API endpoint in the backend. 
 
 ## Docker
-#### Create Dockerfile and write commands using the reference given above
->step1: Creating Docker image in frontend using :
->`docker build -t <imagename> . 
 
->step2: Creating Docker image in backend using :
->`cd backend/`
->`docker build -t <imagename> . `
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
 
->step3: Creating container using Docker image by this command :
-`docker run -itd --name <container_name> -p <portno> <imagename>`
+## Dockerfile
 
->step4: Checking the containers created using :
->To see running containers : 
->` docker ps ` 
->To see running and non-running containers :
->` docker ps -a ` 
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image
 
->step5: In browser exposing the container by :
->`localhost:portno`
+# Table of Contents
+- [Docker Compose ](#docker-compose-v2)
+- [Where to get Docker Compose](#where-to-get-docker-compose)
+    + [Windows and macOS](#windows-and-macos)
+    + [Linux](#linux)
+- [Quick Start](#quick-start)
+- [Contributing](#contributing)
+# Docker Compose 
 
-## Dockercompose
-#### Nameformat for docker compose file creation: `docker-compose.yml`
-**To run:** `docker compose up -d`
-**To stop:** `docker compose down -d`
-**For expose:** In browser `ipaddr:portno`
+[
+![Docker Compose](https://jeddict.github.io/tutorial/Docker/COMPOSE.png "Docker Compose Logo")
 
-## Dockerswarm 
-#### Nameformat for docker stack file creation: `docker.stack.yml`
->step1: Initializing dockerswarm in manager node by :
->`docker swarm init --advertise-addr <IPaddr of manager node>`
 
->step2: Assigning workernode for managernode using token :  
->`docker swarm join --token (token will be provided after executing step1)`
+Docker Compose is a tool for running multi-container applications on Docker
+defined using the [Compose file format](https://compose-spec.io).
+A Compose file is used to define how one or more containers that make up
+your application are configured.
+Once you have a Compose file, you can create and start your application with a
+single command: `docker compose up`.
 
->step3: Creating the dockerstackfile by :
->`vi docker.stack.yml` 
 
->step4: Deploying the docker stack using :
->`docker stack deploy -c docker.stack.yml <name>`
+# Where to get Docker Compose
 
->step5: Exposing the container in browser by :
->`ipaddr:portno`
+### Windows and macOS
+
+Docker Compose is included in
+[Docker Desktop](https://www.docker.com/products/docker-desktop)
+for Windows and macOS.
+
+### Linux
+
+You can download Docker Compose binaries from the
+[release page](https://github.com/docker/compose/releases) on this repository.
+
+Rename the relevant binary for your OS to `docker-compose` and copy it to `$HOME/.docker/cli-plugins`
+
+Or copy it into one of these folders to install it system-wide:
+
+* `/usr/local/lib/docker/cli-plugins` OR `/usr/local/libexec/docker/cli-plugins`
+* `/usr/lib/docker/cli-plugins` OR `/usr/libexec/docker/cli-plugins`
+
+(might require making the downloaded file executable with `chmod +x`)
+
+
+Quick Start
+-----------
+
+Using Docker Compose is a three-step process:
+1. Define your app's environment with a `Dockerfile` so it can be
+   reproduced anywhere.
+2. Define the services that make up your app in `docker-compose.yml` so
+   they can be run together in an isolated environment.
+3. Lastly, run `docker compose up` and Compose will start and run your entire
+   app.
+
+A Compose file looks like this:
+
+```yaml
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+  redis:
+    image: redis
+```
+
+Contributing
+------------
+
+Dont hesitate to create a pull request
