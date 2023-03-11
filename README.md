@@ -53,7 +53,6 @@ A Dockerfile is a text document that contains all the commands a user could call
 - [Contributing](#contributing)
 # Docker Compose 
 
-[
 ![Docker Compose](https://jeddict.github.io/tutorial/Docker/COMPOSE.png "Docker Compose Logo")
 
 
