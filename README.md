@@ -36,24 +36,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Testing the application
 Click on the button that appears on the page to make the request to the API endpoint in the backend. 
 
-## Docker
+# Docker
 
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+![Docker](https://jeddict.github.io/tutorial/Docker/DOCKER.png)
 
-## Dockerfile
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+
+# Dockerfile
 
 A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image
 
-# Table of Contents
-- [Docker Compose ](#docker-compose-v2)
-- [Where to get Docker Compose](#where-to-get-docker-compose)
-    + [Windows and macOS](#windows-and-macos)
-    + [Linux](#linux)
-- [Quick Start](#quick-start)
-- [Contributing](#contributing)
 # Docker Compose 
 
-[
 ![Docker Compose](https://jeddict.github.io/tutorial/Docker/COMPOSE.png "Docker Compose Logo")
 
 
@@ -64,28 +58,6 @@ your application are configured.
 Once you have a Compose file, you can create and start your application with a
 single command: `docker compose up`.
 
-
-# Where to get Docker Compose
-
-### Windows and macOS
-
-Docker Compose is included in
-[Docker Desktop](https://www.docker.com/products/docker-desktop)
-for Windows and macOS.
-
-### Linux
-
-You can download Docker Compose binaries from the
-[release page](https://github.com/docker/compose/releases) on this repository.
-
-Rename the relevant binary for your OS to `docker-compose` and copy it to `$HOME/.docker/cli-plugins`
-
-Or copy it into one of these folders to install it system-wide:
-
-* `/usr/local/lib/docker/cli-plugins` OR `/usr/local/libexec/docker/cli-plugins`
-* `/usr/lib/docker/cli-plugins` OR `/usr/libexec/docker/cli-plugins`
-
-(might require making the downloaded file executable with `chmod +x`)
 
 
 Quick Start
@@ -110,7 +82,7 @@ services:
     volumes:
       - .:/code
   redis:
-    image: redis
+    image: nginx
 ```
 
 Contributing
