@@ -11,20 +11,10 @@ services:
        - network-backend
   api:
     build: ./backend
-    # depends_on:
-    #   - mongo
     ports:
       - "5000:5000"
     networks:
       - network-backend
-  # mongo:
-  #   image: mongo
-  #   restart: always
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: root
-  #     MONGO_INITDB_ROOT_PASSWORD: example
-  #   volumes:
-  #     - "/var/run/docker.sock:/var/run/docker.sock"
 
 networks:
   network-backend:
