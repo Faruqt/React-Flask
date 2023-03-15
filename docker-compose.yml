@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  web:
+    build: ./
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    networks:
+       - network-backend
+  api:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - network-backend
+
+networks:
+  network-backend:
